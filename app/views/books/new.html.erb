@@ -1,0 +1,31 @@
+<div class="book-new-wrapper" >
+  <div class="container">
+    <div class="row">
+        <h1 class="text-center">本の登録</h1>
+        <%= form_for @book do |f| %>
+          <div class="form-group">
+            <%= f.label :genre, "本のジャンル" %>
+            <%= f.text_area :genre, class: "form-control"%>
+          </div>
+          <div class="form-group">
+            <%= f.label :title, "本のタイトル" %>
+            <%= f.text_area :title, class: "form-control"%>
+          </div>
+        
+          <div class="form-group">
+            <%= f.label :image, "イメージ画像" %>
+            <%= f.file_field :image%>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :description, "コメント" %>
+            <%= f.text_area :description, class: 'form-control' %>
+          </div>
+
+          <%= f.submit '投稿', class: 'btn btn-black btn-block' %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @books.each do |book| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="book-index-single">
+            <h2 class="book-author">
+              <%= link_to book_path(id: book.id) do %>
+                <%= book.title %>
+              <% end %>
+            </h2>
+            <%= link_to book_path(id: book.id) do %>
+              <%= image_tag book.image.url, class: "index-image" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
