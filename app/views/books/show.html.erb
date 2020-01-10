@@ -4,15 +4,15 @@
       <div class="col-md-6 col-md-offset-3">
         <div class="book-index-single">
           <h2 class="book-author">
-            <%= @book.title %>
+            タイトル：<%= @book.title %>
           </h2>
           <%= image_tag @book.image.url, class: "index-image" %>
-          <p>
-            <%= @book.genre %>
-          </p>
-          <p>
-            <%= @book.description %>
-          </p>
+          <div class= show-genre>
+            ジャンル：<%= @book.genre %>
+          </div>
+          <div class= show-descriprion>
+            コメント：<%= @book.description %>
+          </div>
           <%=link_to edit_book_path do %>
             <%= "修正" %>
           <% end %>

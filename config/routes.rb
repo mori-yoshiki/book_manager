@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   
   resources :books
   
+  get 'search', to: 'books#search'
+  
 end

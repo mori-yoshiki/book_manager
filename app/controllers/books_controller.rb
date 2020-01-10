@@ -1,7 +1,13 @@
 class BooksController < ApplicationController
   
   def index
-    @books = current_user.books.all
+    @q = Book.ransack(params[:q])
+    @books = @q.result(distinct: true)
+  end
+
+  def search
+    @q = Book.search(search_params)
+    @books = @q.result
   end
 
 
@@ -48,4 +54,5 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:image, :description, :title, :genre)
   end
+  
 end
