@@ -1,6 +1,5 @@
-
 h1, h2 {
-  font-weight: 100;
+  font-weight: 350;
 }
 
 .text-white {
@@ -23,7 +22,7 @@ h1, h2 {
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
-  background-color: green;
+  background-image: url("bookshelf-1082309_1920.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -89,4 +88,15 @@ h1, h2 {
 
 .book-index-wrapper {
   margin-top: 70px;
+}
+
+.book-index-wrapper {
+  background-image: url("paper-1074131_1920 (1).jpg");
+  background-size: cover;
+}
+
+.book-new-wrapper {
+ background-image: url("paper-1074131_1920 (1).jpg");
+ padding-bottom: 80px;
+  
 }
